@@ -11,6 +11,9 @@ body {
     background-color: var(--color-white);
     font-size: 16px;
     font-family: 'Times New Roman', Times, serif;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 
 header {
@@ -26,18 +29,22 @@ header > h1 {
 
 main {
     margin: 50px 15%;
+}
+
+main > .cabinet {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
     gap: 25px;
 }
 
-main > .book {
+main > .cabinet >.book {
     background-color: var(--color-yellow);
     padding: 10px;
     box-shadow: var(--box-shadow);
     border-radius: 10px;
     border: 2px solid var(--color-red);
     text-align: center;
+    margin-bottom: 20px;
 }
 
 main > .book > * {
