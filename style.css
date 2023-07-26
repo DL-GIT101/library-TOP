@@ -43,3 +43,10 @@ main > .book {
 main > .book > * {
     margin: 0;
 }
+
+footer {
+    background-color: var(--color-red);
+    color: var(--color-white);
+    text-align: center;
+    padding: 20px;
+}
