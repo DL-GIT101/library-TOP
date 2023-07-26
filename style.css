@@ -5,3 +5,9 @@
     --color-lightblue:#94a9b4;
     --color-red:#670000;
 }
+
+body {
+    background-color: var(--color-white);
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+}
