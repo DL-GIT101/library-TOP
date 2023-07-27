@@ -42,7 +42,6 @@ main > .cabinet >.book {
     padding: 10px;
     box-shadow: var(--box-shadow);
     border-radius: 10px;
-    border: 2px solid var(--color-red);
     text-align: center;
     margin-bottom: 20px;
 }
@@ -52,8 +51,6 @@ main > .book > * {
 }
 
 footer {
-    background-color: var(--color-red);
-    color: var(--color-white);
     text-align: center;
     padding: 20px;
 }
