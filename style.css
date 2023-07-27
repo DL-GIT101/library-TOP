@@ -20,11 +20,33 @@ header {
     background-color: var(--color-blue);
     color: var(--color-white);
     box-shadow: var(--box-shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15%;
 }
 
 header > h1 {
-    margin: 0 15%;
+    margin: 0;
+}
+
+header > svg {
     padding: 20px 10px;
+    height: 50px;
+    width: 50px;
+    fill: none;
+    stroke: var(--color-white);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: transform 1s;
+}
+
+
+header > svg:hover {
+    stroke: var(--color-yellow);
+    cursor: pointer;
+    transform: scale(1.2, 1.2);
 }
 
 main {
