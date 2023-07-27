@@ -4,6 +4,7 @@
     --color-white:#eaeada;
     --color-lightblue:#94a9b4;
     --color-red:#670000;
+    --color-green:#006707;
     --box-shadow: 0px 5px 14px -1px rgba(0,0,0,0.48);
 }
 
@@ -76,3 +77,78 @@ footer {
     text-align: center;
     padding: 20px;
 }
+
+.modal {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal > .content {
+    background-color: var(--color-lightblue);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.modal > .content > h2{
+    text-align: center;
+}
+
+.modal > .content > form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal > .content > form > label{
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.modal > .content > form > input{
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 10px;
+    padding-left: 1rem;
+    line-height: 2rem;
+    box-shadow: var(--box-shadow);
+}
+
+.modal > .content > form > input:focus{
+    outline: 2px solid var(--color-red);
+}
+
+.modal > .content > form > .buttons {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.modal > .content > form > .buttons > button{
+    border: none;
+    border-radius: 10px;
+    padding: 5px 20px;
+    margin-left: 10px;
+    font-weight: 600;
+    box-shadow: var(--box-shadow);
+}
+
+.modal > .content > form > .buttons > button:hover{
+    filter: brightness(0.75);
+    cursor: pointer;
+}
+
+.modal > .content > form > .buttons > .close{
+    background-color: var(--color-red);
+    color: var(--color-white);
+}
+
+.modal > .content > form > .buttons > .add{
+    background-color: var(--color-green);
+    color: var(--color-white);
+}
+
