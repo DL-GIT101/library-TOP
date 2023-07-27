@@ -152,3 +152,6 @@ footer {
     color: var(--color-white);
 }
 
+.hidden {
+    display: none;
+}
