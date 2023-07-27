@@ -40,9 +40,8 @@ header > svg {
     stroke-width: 2;
     stroke-linecap: round;
     stroke-linejoin: round;
-    transition: transform 1s;
+    transition: transform 0.5s;
 }
-
 
 header > svg:hover {
     stroke: var(--color-yellow);
