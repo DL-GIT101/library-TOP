@@ -2,6 +2,7 @@ const addBTN = document.querySelector('header > svg');
 const closeBTN = document.querySelector('.modal > .content > form > .buttons > .close');
 const form = document.querySelector('.modal > .content > form')
 const modal = document.querySelector('.modal');
+const submitBTN = document.querySelector('.add');
 const cabinet = document.querySelector('.cabinet')
 
 addBTN.addEventListener('click', () => {
@@ -12,9 +13,13 @@ closeBTN.addEventListener('click', () => {
   modal.classList.add('hidden');
 })
 
-form.addEventListener('click', (event) => {
+form.addEventListener('submit', (event) => {
   event.preventDefault();
-})
+});
+
+submitBTN.addEventListener('click', () => {
+  addBookToLibrary();
+});
 
 const sampleBook0 = new Book('Harry Potter', 'J.K. Rowling', 569, false);
 const sampleBook1 = new Book('Hairy Shaver', 'Joke Rollin', 420, true);
@@ -29,10 +34,28 @@ function Book(title, author, pages, read) {
 }
 
 function addBookToLibrary() {
-  // do stuff here
+
+  let inputTitle = document.getElementById('title').value;
+  let inputAuthor = document.getElementById('author').value;
+  let inputPages = document.getElementById('pages').value;
+  let inputRead = document.getElementById('read');
+    if(inputRead.checked){
+      inputRead = true;
+    }else{
+      inputRead = false;
+    }
+
+    myLibrary.push(new Book(inputTitle,inputAuthor,inputPages,inputRead));
+    displayBooks();
 }
 
 function displayBooks() {
+    
+    let lastBook = cabinet.lastElementChild;
+    while(lastBook){
+      cabinet.removeChild(lastBook);
+      lastBook = cabinet.lastElementChild;
+    }
 
   myLibrary.forEach(book => {
     let bookContainer = document.createElement('div');
