@@ -116,11 +116,10 @@ footer {
     margin-bottom: 10px;
     padding-left: 1rem;
     line-height: 2rem;
-    box-shadow: var(--box-shadow);
 }
 
 .modal > .content > form > input:focus{
-    outline: 2px solid var(--color-red);
+    outline: 2px solid var(--color-blue);
 }
 
 .modal > .content > form > .buttons {
@@ -134,7 +133,6 @@ footer {
     padding: 5px 20px;
     margin-left: 10px;
     font-weight: 600;
-    box-shadow: var(--box-shadow);
 }
 
 .modal > .content > form > .buttons > button:hover{
