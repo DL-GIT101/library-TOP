@@ -16,12 +16,17 @@ submitBTN.addEventListener('click', (event) => {
   event.preventDefault()
 })
 
-let myLibrary = [];
+let myLibrary = [sampleBook];
 
-function Book() {
-  // the constructor...
+function Book(title, author, pages, read) {
+  this.title = title;
+  this.author = author;
+  this.pages = pages;
+  this.read = read;
 }
 
 function addBookToLibrary() {
   // do stuff here
 }
+
+const sampleBook = new Book('Harry Potter', 'J.K. Rowling', 569, false);
