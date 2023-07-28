@@ -1,6 +1,6 @@
 const addBTN = document.querySelector('header > svg');
 const closeBTN = document.querySelector('.modal > .content > form > .buttons > .close');
-const submitBTN = document.querySelector('.modal > .content > form > .buttons > .add')
+const form = document.querySelector('.modal > .content > form')
 const modal = document.querySelector('.modal');
 const cabinet = document.querySelector('.cabinet')
 
@@ -8,14 +8,14 @@ addBTN.addEventListener('click', () => {
   modal.classList.remove('hidden');
 })
 
-closeBTN.addEventListener('click', (event) => {
-  event.preventDefault()
+closeBTN.addEventListener('click', () => {
   modal.classList.add('hidden');
 })
 
-submitBTN.addEventListener('click', (event) => {
-  event.preventDefault()
+form.addEventListener('click', (event) => {
+  event.preventDefault();
 })
+
 const sampleBook0 = new Book('Harry Potter', 'J.K. Rowling', 569, false);
 const sampleBook1 = new Book('Hairy Shaver', 'Joke Rollin', 420, true);
 let myLibrary = [sampleBook0,sampleBook1];
