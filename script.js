@@ -2,7 +2,6 @@ const addBTN = document.querySelector('header > svg');
 const closeBTN = document.querySelector('.modal > .content > form > .buttons > .close');
 const form = document.querySelector('.modal > .content > form')
 const modal = document.querySelector('.modal');
-const submitBTN = document.querySelector('.add');
 const cabinet = document.querySelector('.cabinet')
 
 addBTN.addEventListener('click', () => {
@@ -15,9 +14,6 @@ closeBTN.addEventListener('click', () => {
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
-});
-
-submitBTN.addEventListener('click', () => {
   addBookToLibrary();
 });
 
