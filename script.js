@@ -121,7 +121,6 @@ function displayBooks() {
     deleteBTN.addEventListener('click', () => {
       cabinet.removeChild(deleteBTN.parentNode);
       myLibrary.splice(index, 1);
-      console.log(myLibrary);
     });
 
   });
