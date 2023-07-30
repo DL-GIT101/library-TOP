@@ -47,6 +47,8 @@ function addBookToLibrary() {
 
     myLibrary.push(new Book(inputTitle,inputAuthor,inputPages,inputRead));
     displayBooks();
+    form.reset();
+    modal.classList.add('hidden');
 }
 
 function displayBooks() {
