@@ -111,8 +111,19 @@ function displayBooks() {
         myLibrary[index].read = true;
         currentStatus.textContent = "Finished";
       }
-     
     });
+
+    let deleteBTN = document.createElement('button');
+    deleteBTN.className = 'delete';
+    deleteBTN.textContent = "Delete";
+    bookContainer.appendChild(deleteBTN);
+
+    deleteBTN.addEventListener('click', () => {
+      cabinet.removeChild(deleteBTN.parentNode);
+      myLibrary.splice(index, 1);
+      console.log(myLibrary);
+    });
+
   });
 }
 
