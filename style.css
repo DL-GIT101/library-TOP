@@ -68,8 +68,18 @@ main > .cabinet >.book {
     margin-bottom: 20px;
 }
 
-main > .book > * {
-    margin: 0;
+main > .cabinet > .book > * {
+    margin: 0.5rem;
+}
+
+main > .cabinet > .book > .toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main > .cabinet > .book > .toggle-container > *{
+    margin-left: 10px;
 }
 
 footer {
@@ -208,6 +218,7 @@ input:checked + .slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
+
 .hidden {
     display: none;
 }
