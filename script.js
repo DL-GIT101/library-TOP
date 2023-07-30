@@ -75,13 +75,31 @@ function displayBooks() {
     bookContainer.appendChild(bookPages);
 
     let readStatus = document.createElement('div');
-    readStatus.classList.add('toggle');
+    readStatus.classList.add('toggle-container');
+
+    let toggleContainer = document.createElement('label');
+    toggleContainer.classList.add('switch');
+    let checkBox = document.createElement('input');
+    checkBox.setAttribute("type","checkbox");
+    let slider = document.createElement('span');
+    slider.className = "slider round";
+
+    toggleContainer.appendChild(checkBox);
+    toggleContainer.appendChild(slider);
+    readStatus.appendChild(toggleContainer);
+
     if(book.read === true){
       statusMsg = "Finished";
+      checkBox.checked = true;
     }else {
       statusMsg = "Unread";
+      checkBox.checked = false;
     }
-    readStatus.textContent = statusMsg;
+
+    let currentStatus = document.createElement('p');
+    currentStatus.textContent = statusMsg;
+    readStatus.appendChild(currentStatus);
+
     bookContainer.appendChild(readStatus);
   });
 }
