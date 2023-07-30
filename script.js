@@ -55,7 +55,7 @@ function displayBooks() {
       lastBook = cabinet.lastElementChild;
     }
 
-  myLibrary.forEach(book => {
+  myLibrary.forEach((book, index) => {
     let bookContainer = document.createElement('div');
     bookContainer.classList.add('book');
     cabinet.appendChild(bookContainer);
@@ -101,6 +101,18 @@ function displayBooks() {
     readStatus.appendChild(currentStatus);
 
     bookContainer.appendChild(readStatus);
+
+    checkBox.addEventListener('click', () => {
+      let bookStatus = myLibrary[index].read;
+      if(bookStatus === true){
+        myLibrary[index].read = false;
+        currentStatus.textContent = "Unread";
+      }else if(bookStatus === false){
+        myLibrary[index].read = true;
+        currentStatus.textContent = "Finished";
+      }
+     
+    });
   });
 }
 
