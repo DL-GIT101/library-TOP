@@ -82,6 +82,19 @@ main > .cabinet > .book > .toggle-container > *{
     margin-left: 10px;
 }
 
+main > .cabinet > .book > .delete{
+    border: none;
+    background-color: var(--color-red);
+    color: var(--color-white);
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+
+main > .cabinet > .book > .delete:hover{
+    filter: brightness(1.5);
+    cursor: pointer;
+}
+
 footer {
     text-align: center;
     padding: 20px;
