@@ -21,12 +21,13 @@ const sampleBook0 = new Book('Harry Potter', 'J.K. Rowling', 569, false);
 const sampleBook1 = new Book('Hairy Shaver', 'Joke Rollin', 420, true);
 let myLibrary = [sampleBook0,sampleBook1];
 
-function Book(title, author, pages, read) {
-
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
+class Book {
+  constructor(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+  }
 }
 
 function addBookToLibrary() {
